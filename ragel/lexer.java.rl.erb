@@ -72,6 +72,13 @@ public class <%= @i18n.underscored_iso_code.capitalize %> implements Lexer {
       nextKeywordStart = -1;
     }
 
+    action store_next_scenario_content {
+      String[] nameDescription = nameAndUnindentedDescription(startCol, keywordContent(data, p, eof, nextKeywordStart, contentStart));
+      listener.nextScenario(keyword, nameDescription[0], nameDescription[1], currentLine);
+      if(nextKeywordStart != -1) p = nextKeywordStart - 1;
+      nextKeywordStart = -1;
+    }
+
     action store_examples_content {
       String[] nameDescription = nameAndUnindentedDescription(startCol, keywordContent(data, p, eof, nextKeywordStart, contentStart));
       listener.examples(keyword, nameDescription[0], nameDescription[1], currentLine);

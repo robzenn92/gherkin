@@ -49,6 +49,13 @@ module Gherkin
         end
       end
 
+      def next_scenario(keyword, name, description, line)
+        replay_step_or_examples
+        @stash.feature_element(name) do |comments, tags, id|
+          replay Formatter::Model::NextScenario.new(comments, tags, keyword, name, description, line, id)
+        end
+      end
+
       def examples(keyword, name, description, line)
         replay_step_or_examples
         @stash.examples(name) do |comments, tags, id|

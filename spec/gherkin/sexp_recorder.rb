@@ -10,7 +10,7 @@ module Gherkin
     end
 
     # We can't use method_missing - therubyracer isn't able to invoke methods like that.
-    [:comment, :tag, :feature, :background, :scenario, :scenario_outline, :examples, :step, :doc_string, :row, :eof, :uri, :syntax_error].each do |event|
+    [:comment, :tag, :feature, :background, :scenario, :scenario_outline, :next_scenario, :examples, :step, :doc_string, :row, :eof, :uri, :syntax_error].each do |event|
       define_method(event) do |*args|
         args  = rubify(args)
         args  = sexpify(args)

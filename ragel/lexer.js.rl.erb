@@ -51,6 +51,10 @@
     p = this.store_keyword_content('scenario_outline', data, p, eof);
   }
 
+  action store_next_scenario_content {
+    p = this.store_keyword_content('next_scenario', data, p, eof);
+  }
+
   action store_examples_content {
     p = this.store_keyword_content('examples', data, p, eof);
   }

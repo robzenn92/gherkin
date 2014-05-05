@@ -91,6 +91,19 @@ module Gherkin
         end
       end
 
+      class NextScenario < TagStatement
+        native_impl('gherkin')
+
+        def initialize(comments, tags, keyword, name, description, line, id)
+          super(comments, tags, keyword, name, description, line, id)
+          @type = "next_scenario"
+        end
+
+        def replay(formatter)
+          formatter.next_scenario(self)
+        end
+      end
+
       class Examples < TagStatement
         native_impl('gherkin')
 

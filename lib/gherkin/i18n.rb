@@ -8,7 +8,7 @@ module Gherkin
 
     native_impl('gherkin') unless defined?(BYPASS_NATIVE_IMPL)
 
-    FEATURE_ELEMENT_KEYS = %w{feature background scenario scenario_outline examples}
+    FEATURE_ELEMENT_KEYS = %w{feature background scenario scenario_outline next_scenario examples}
     STEP_KEYWORD_KEYS    = %w{given when then and but}
     KEYWORD_KEYS         = FEATURE_ELEMENT_KEYS + STEP_KEYWORD_KEYS
     LANGUAGES            = MultiJson.load(File.open(File.dirname(__FILE__) + '/i18n.json', 'r:utf-8').read)

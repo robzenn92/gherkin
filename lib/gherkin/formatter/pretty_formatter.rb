@@ -50,6 +50,11 @@ module Gherkin
         replay
         @statement = scenario_outline
       end
+
+      def next_scenario(next_scenario)
+        replay
+        @statement = next_scenario
+      end
       
       def replay
         print_statement

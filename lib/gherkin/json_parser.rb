@@ -60,6 +60,8 @@ module Gherkin
         Formatter::Model::Scenario.new(comments(o), tags(o), keyword(o), name(o), description(o), line(o), id(o))
       when 'scenario_outline'
         Formatter::Model::ScenarioOutline.new(comments(o), tags(o), keyword(o), name(o), description(o), line(o), id(o))
+      when 'next_scenario'
+        Formatter::Model::NextScenario.new(comments(o), tags(o), keyword(o), name(o), description(o), line(o), id(o))
       end
     end
 

@@ -44,7 +44,7 @@ module Gherkin
         @lexer.errors
       end
 
-      [:comment, :tag, :feature, :background, :scenario, :scenario_outline, :examples, :step, :doc_string, :row, :eof].each do |m|
+      [:comment, :tag, :feature, :background, :scenario, :scenario_outline, :next_scenario, :examples, :step, :doc_string, :row, :eof].each do |m|
         define_method(m) do |*args|
           if(event(m.to_s, args[-1]))
             @listener.__send__(m, *args)

@@ -4,12 +4,7 @@
     "flags": "",
     "source": "^they have arrived$",
     "steps": [
-      {
-        "args": [
 
-        ],
-        "name": "they have arrived"
-      }
     ]
   },
   {
@@ -51,15 +46,7 @@
     "flags": "",
     "source": "^there should be a parse error on (line \\d+)$",
     "steps": [
-      {
-        "args": [
-          {
-            "offset": 33,
-            "val": "line 1"
-          }
-        ],
-        "name": "there should be a parse error on line 1"
-      }
+
     ]
   },
   {
@@ -67,51 +54,7 @@
     "flags": "",
     "source": "^there should be parse errors on (lines .*)$",
     "steps": [
-      {
-        "args": [
-          {
-            "offset": 32,
-            "val": "lines 1 and 2"
-          }
-        ],
-        "name": "there should be parse errors on lines 1 and 2"
-      },
-      {
-        "args": [
-          {
-            "offset": 32,
-            "val": "lines 1 through 3"
-          }
-        ],
-        "name": "there should be parse errors on lines 1 through 3"
-      },
-      {
-        "args": [
-          {
-            "offset": 32,
-            "val": "lines 10 and 17"
-          }
-        ],
-        "name": "there should be parse errors on lines 10 and 17"
-      },
-      {
-        "args": [
-          {
-            "offset": 32,
-            "val": "lines 3 and 5"
-          }
-        ],
-        "name": "there should be parse errors on lines 3 and 5"
-      },
-      {
-        "args": [
-          {
-            "offset": 32,
-            "val": "lines 5, 10 and 12"
-          }
-        ],
-        "name": "there should be parse errors on lines 5, 10 and 12"
-      }
+
     ]
   },
   {
@@ -127,12 +70,7 @@
     "flags": "",
     "source": "^the outputted JSON should be:$",
     "steps": [
-      {
-        "args": [
 
-        ],
-        "name": "the outputted JSON should be:"
-      }
     ]
   },
   {
@@ -156,12 +94,7 @@
     "flags": "",
     "source": "^the following JSON is parsed:$",
     "steps": [
-      {
-        "args": [
 
-        ],
-        "name": "the following JSON is parsed:"
-      }
     ]
   },
   {
@@ -169,12 +102,7 @@
     "flags": "",
     "source": "^the outputted text should be:$",
     "steps": [
-      {
-        "args": [
 
-        ],
-        "name": "the outputted text should be:"
-      }
     ]
   },
   {
@@ -182,12 +110,7 @@
     "flags": "",
     "source": "^I have Cucumber's source code next to Gherkin's$",
     "steps": [
-      {
-        "args": [
 
-        ],
-        "name": "I have Cucumber's source code next to Gherkin's"
-      }
     ]
   },
   {
@@ -195,12 +118,7 @@
     "flags": "",
     "source": "^I find all of the \\.feature files$",
     "steps": [
-      {
-        "args": [
 
-        ],
-        "name": "I find all of the .feature files"
-      }
     ]
   },
   {
@@ -208,24 +126,7 @@
     "flags": "",
     "source": "^I send each prettified original through the \"([^\"]*)\" machinery$",
     "steps": [
-      {
-        "args": [
-          {
-            "offset": 45,
-            "val": "json"
-          }
-        ],
-        "name": "I send each prettified original through the \"json\" machinery"
-      },
-      {
-        "args": [
-          {
-            "offset": 45,
-            "val": "pretty"
-          }
-        ],
-        "name": "I send each prettified original through the \"pretty\" machinery"
-      }
+
     ]
   },
   {
@@ -233,12 +134,7 @@
     "flags": "",
     "source": "^the machinery output should be identical to the prettified original$",
     "steps": [
-      {
-        "args": [
 
-        ],
-        "name": "the machinery output should be identical to the prettified original"
-      }
     ]
   }
 ]
