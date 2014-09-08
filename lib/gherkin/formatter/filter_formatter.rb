@@ -52,6 +52,15 @@ module Gherkin
         @feature_element_events = [scenario]
       end
 
+      def next_scenario(next_scenario)
+        replay!
+        @feature_element_tags   = next_scenario.tags
+        @feature_element_name   = next_scenario.name
+        @feature_element_range  = next_scenario.line_range
+        @feature_element_events = [next_scenario]
+      end
+
+
       def scenario_outline(scenario_outline)
         replay!
         @feature_element_tags   = scenario_outline.tags

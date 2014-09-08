@@ -213,6 +213,7 @@ module Gherkin
       | background       | "Contexte"                                                                                                                                            |
       | scenario         | "Scénario"                                                                                                                                            |
       | scenario_outline | "Plan du scénario", "Plan du Scénario"                                                                                                                |
+      | next_scenario    | "*", "Next Scenario"                                                                                                                                  |
       | examples         | "Exemples"                                                                                                                                            |
       | given            | "* ", "Soit ", "Etant donné ", "Etant donnée ", "Etant donnés ", "Etant données ", "Étant donné ", "Étant donnée ", "Étant donnés ", "Étant données " |
       | when             | "* ", "Quand ", "Lorsque ", "Lorsqu'"                                                                                                                 |
@@ -233,6 +234,7 @@ module Gherkin
       | background       | "mo'"                                                   |
       | scenario         | "lut"                                                   |
       | scenario_outline | "lut chovnatlh"                                         |
+      | next_scenario    | "*", "Next Scenario"                                    |
       | examples         | "ghantoH", "lutmey"                                     |
       | given            | "* ", "ghu' noblu' ", "DaH ghu' bejlu' "                |
       | when             | "* ", "qaSDI' "                                         |

@@ -3,4 +3,4 @@ gemspec
 
 # gem 'cucumber', :path => '../cucumber'
 
-gem 'rgl'
+# gem 'rgl'

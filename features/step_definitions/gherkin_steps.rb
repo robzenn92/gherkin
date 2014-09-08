@@ -10,6 +10,10 @@ Then "there should be no parse errors" do
   @formatter.errors.should == []
 end
 
+Then "there should be some parse errors" do
+  @formatter.errors.count.should > 0
+end
+
 Then /^there should be a parse error on (line \d+)$/ do |line|
   @formatter.line(line).should include(:syntax_error, line)
 end
@@ -26,4 +30,8 @@ end
 
 Transform /^lines .*$/ do |step_arg|
   tr_line_numbers(step_arg)
+end
+
+Then "a graph variable instance should be exists" do
+  @graph.should == nil
 end

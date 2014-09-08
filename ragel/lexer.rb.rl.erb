@@ -1,5 +1,5 @@
 require 'gherkin/native'
-require 'rgl/adjacency'
+# require 'rgl/adjacency'
 
 module Gherkin
   module Lexer
@@ -146,8 +146,6 @@ module Gherkin
  
         %% write init;
         %% write exec;
-
-        puts "FINISHHHH"
       end
 
       def unindent(startcol, text)
@@ -162,7 +160,9 @@ module Gherkin
         name.strip!
         description = content_lines.join("\n")
 
-        buildControlFlow(name) if event == :next_scenario
+        # puts event
+        # prev_scenario = name if event == :scenario
+        # buildControlFlow(prev_scenario, name) if event == :next_scenario 
 
         @listener.__send__(event, @keyword, name, description, @current_line)
         @next_keyword_start ? @next_keyword_start - 1 : p
@@ -175,11 +175,11 @@ module Gherkin
         utf8_pack(rest[0..rest.index(10)||-1]).strip # 10 is \n
       end
 
-      def buildControlFlow(name)
-        @graph ||= AutomaticTestCasesGraph.new
-        @graph.add_edge "Login", name
-        puts @graph.edges
-      end
+      # def buildControlFlow(prev, succ)
+      #     @graph ||= AutomaticTestCasesGraph.new
+      #     @graph.add_edge prev, succ
+      #     puts @graph.edges
+      # end
 
       if (RUBY_VERSION =~ /^(1\.9|2\.)/)
         def utf8_pack(array)
@@ -192,23 +192,23 @@ module Gherkin
       end
     end
 
-    class AutomaticTestCasesGraph
+    # class AutomaticTestCasesGraph
 
-      def initialize
-        @graph = RGL::DirectedAdjacencyGraph[]
-      end
+    #   def initialize
+    #     @graph = RGL::DirectedAdjacencyGraph[]
+    #   end
 
-      def add_edge(first_node, second_node)
-        @graph.add_edge first_node, second_node
-      end
+    #   def add_edge(first_node, second_node)
+    #     @graph.add_edge first_node, second_node
+    #   end
 
-      def vertices
-        @graph.vertices
-      end
+    #   def vertices
+    #     @graph.vertices
+    #   end
 
-      def edges
-        @graph.edges.sort.to_s
-      end
-    end
+    #   def edges
+    #     @graph.edges.sort.to_s
+    #   end
+    # end
   end
 end

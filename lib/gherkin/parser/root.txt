@@ -6,7 +6,8 @@
  | background       | E       | E          | scenario      | scenario_outline | E             | E        | step         | E              | E            | eof | push(meta) | push(meta) |
  | scenario         | E       | E          | scenario      | scenario_outline | next_scenario | E        | step         | E              | E            | eof | push(meta) | push(meta) |
  | scenario_outline | E       | E          | E             | E                | next_scenario | E        | outline_step | E              | E            | eof | push(meta) | push(meta) |
- | next_scenario    | E       | E          | scenario      | scenario_outline | next_scenario | E        | step         | E              | E            | eof | push(meta) | push(meta) |
+ | next_scenario    | E       | E          | scenario      | scenario_outline | next_scenario | E        | E            | E              | E            | eof | push(meta) | push(meta) |
  | examples         | E       | E          | E             | E                | E             | E        | E            | examples_table | E            | eof | push(meta) | push(meta) |
  | examples_table   | E       | E          | scenario      | scenario_outline | E             | examples | E            | examples_table | E            | eof | push(meta) | push(meta) |
  | eof              | E       | E          | E             | E                | E             | E        | E            | E              | E            | E   | E          | E          |
+ 
